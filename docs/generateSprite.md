@@ -1,54 +1,20 @@
----
-slug: /
-sidebar_position: 1
----
+# SpriteAI Library
 
-# generateSprite Documentation
+## Overview
 
-## Brief Description
-`generateSprite` is a function that generates a sprite sheet image based on a given description, using AI-powered image generation and analysis.
+The SpriteAI library provides a set of tools for adding AI-powered behavior to 2D sprites in game development. This library is designed to simplify the process of creating intelligent and responsive characters, enemies, and other entities within a game world.
 
-## Usage
-To use `generateSprite`, import it from the sprite module and call it with a description of the character you want to generate.
+## Features
 
-```javascript
-import { sprite } from './path/to/sprite/module';
+- **Pathfinding**: The library includes advanced pathfinding algorithms to allow characters to navigate through complex environments, avoiding obstacles and finding the optimal path to their destinations.
+- **Steering Behaviors**: SpriteAI offers a variety of steering behaviors, such as seeking, fleeing, and collision avoidance, to make characters move in a more natural and believable manner.
+- **Decision Making**: The library includes a decision-making framework that allows characters to evaluate their surroundings, make choices, and respond to changes in their environment.
+- **Event Handling**: SpriteAI provides a flexible event system that enables characters to react to various events, such as player interactions, environmental changes, or the actions of other characters.
 
-const result = await sprite.generateSprite(description, options);
-```
+## Updates
 
-## Parameters
-- `description` (string, required): A text description of the character to generate.
-- `options` (object, optional):
-  - `iterations` (number): Number of sprite variations to generate.
-  - `size` (string): Size of the generated image (default: "1024x1024").
-  - `save` (boolean): Whether to save the generated image to disk.
+The SpriteAI library is currently out of date and may not reflect the latest features or bug fixes. The development team is working on updating the library to address any issues and incorporate new functionality. We recommend reviewing the project's documentation and release notes for the most up-to-date information.
 
-## Return Value
-Returns an object or array of objects containing:
-- `messages`: JSON object with frameHeight and frameWidth information.
-- `image`: Base64-encoded image data URL of the generated sprite sheet.
+## Getting Started
 
-## Examples
-
-1. Generate a single sprite sheet:
-```javascript
-const result = await sprite.generateSprite("A pixelated robot");
-console.log(result.messages);
-console.log(result.image);
-```
-
-2. Generate multiple variations:
-```javascript
-const variations = await sprite.generateSprite("A cartoon cat", { iterations: 3 });
-variations.forEach((variation, index) => {
-  console.log(`Variation ${index + 1}:`, variation.messages);
-});
-```
-
-## Notes or Considerations
-- The function uses AI models (DALL-E 3 and GPT) to generate and analyze images, which may result in varying outputs for the same input.
-- Generated sprites are optimized for walking animations and follow a specific layout (6 frames in a 2x3 grid).
-- The function converts images to grayscale, which may affect the final output.
-- When saving images, they are stored in an 'assets' folder with a filename based on the description.
-- The function may take some time to complete due to API calls and image processing.
+To use the SpriteAI library, please refer to the project's documentation and example code for detailed instructions on installation, setup, and implementation. If you encounter any issues or have suggestions for improvements, feel free to reach out to the development team or submit a bug report on the project's issue tracker.
