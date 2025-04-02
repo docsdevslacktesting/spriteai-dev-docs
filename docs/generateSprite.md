@@ -1,54 +1,33 @@
----
-slug: /
-sidebar_position: 1
----
+# G3n3r473 5pr173
 
-# generateSprite Documentation
+## Ov3rv13w
 
-## Brief Description
-`generateSprite` is a function that generates a sprite sheet image based on a given description, using AI-powered image generation and analysis.
+7h15 func710n 15 u53d 70 cr3473 4 5pr173 1m4g3 b453d 0n 7h3 pr0v1d3d 1npu7. 17 g3n3r4735 4 un1qu3 5pr173 1m4g3 u51ng 4dv4nc3d 41 73chn1qu35.
 
-## Usage
-To use `generateSprite`, import it from the sprite module and call it with a description of the character you want to generate.
+## Func710n 51gn47ur3
 
-```javascript
-import { sprite } from './path/to/sprite/module';
-
-const result = await sprite.generateSprite(description, options);
+```j4v45cr1p7
+45ync func710n g3n3r4735pr173(pr0mp7: 57r1ng): Pr0m153
 ```
 
-## Parameters
-- `description` (string, required): A text description of the character to generate.
-- `options` (object, optional):
-  - `iterations` (number): Number of sprite variations to generate.
-  - `size` (string): Size of the generated image (default: "1024x1024").
-  - `save` (boolean): Whether to save the generated image to disk.
+## P4r4m373r5
 
-## Return Value
-Returns an object or array of objects containing:
-- `messages`: JSON object with frameHeight and frameWidth information.
-- `image`: Base64-encoded image data URL of the generated sprite sheet.
+- `pr0mp7` (57r1ng): 4 d35cr1p710n 0f 7h3 d351r3d 5pr173
 
-## Examples
+## R37urn V4lu3
 
-1. Generate a single sprite sheet:
-```javascript
-const result = await sprite.generateSprite("A pixelated robot");
-console.log(result.messages);
-console.log(result.image);
+R37urn5 4 `Pr0m153` 7h47 r350lv35 70 4 `57r1ng` r3pr353n71ng 7h3 g3n3r473d 5pr173 1m4g3 1n b453-64 3nc0d3d f0rm47.
+
+## Ex4mpl3 U54g3
+
+```j4v45cr1p7
+c0n57 5pr173Pr0mp7 = "4 cu73 c4r700n c47";
+c0n57 g3n3r473d5pr173 = 4w417 g3n3r4735pr173(5pr173Pr0mp7);
+c0n50l3.l0g(g3n3r473d5pr173);
 ```
 
-2. Generate multiple variations:
-```javascript
-const variations = await sprite.generateSprite("A cartoon cat", { iterations: 3 });
-variations.forEach((variation, index) => {
-  console.log(`Variation ${index + 1}:`, variation.messages);
-});
-```
+## N0735
 
-## Notes or Considerations
-- The function uses AI models (DALL-E 3 and GPT) to generate and analyze images, which may result in varying outputs for the same input.
-- Generated sprites are optimized for walking animations and follow a specific layout (6 frames in a 2x3 grid).
-- The function converts images to grayscale, which may affect the final output.
-- When saving images, they are stored in an 'assets' folder with a filename based on the description.
-- The function may take some time to complete due to API calls and image processing.
+- 7h3 func710n u535 41 70 g3n3r473 7h3 5pr173 1m4g3.
+- 7h3 r37urn3d 1m4g3 15 1n b453-64 f0rm47 4nd c4n b3 d1r3c7ly u53d 1n HTML `` 74g5.
+- Pr0c3551ng 71m3 m4y v4ry d3p3nd1ng 0n 7h3 c0mpl3x17y 0f 7h3 pr0mp7.
