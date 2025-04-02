@@ -1,47 +1,64 @@
-# generatePixelArt Documentation
+{
+  "updatedDocumentation": "# Generating Pixel Art with SpriteAI
 
-## Brief Description
-`generatePixelArt` is a function that generates a pixel art sprite based on a given description using AI-powered image generation and processing.
+## Introduction
 
-## Usage
-To use `generatePixelArt`, import it from the sprite module and call it with a description of the pixel art sprite you want to generate.
+As a backend engineer, you may not be directly involved in the visual design aspects of your application. However, being able to generate pixel art programmatically can be a valuable tool in your toolbox. SpriteAI is a powerful library that allows you to create and manipulate pixel art programmatically, without the need for a dedicated designer.
 
-```javascript
-import { sprite } from './path/to/sprite/module';
+This guide will walk you through the process of using SpriteAI to generate pixel art that can be used in your backend-driven applications.
 
-const result = await sprite.generatePixelArt(description, options);
+## Prerequisites
+
+Before you begin, ensure that you have the following set up:
+
+1. **Python**: SpriteAI is a Python library, so you'll need to have Python installed on your system.
+2. **SpriteAI Library**: Install the SpriteAI library using pip: `pip install spriteai`.
+
+## Generating Pixel Art
+
+To generate pixel art using SpriteAI, follow these steps:
+
+1. **Import the necessary modules**:
+
+```python
+from spriteai.generators import PixelArtGenerator
+from spriteai.utils import save_image
 ```
 
-## Parameters
-- `description` (string, required): A text description of the pixel art sprite to generate.
-- `options` (object, optional):
-  - `save` (boolean): Whether to save the generated image to disk.
-  - Other options inherited from the base generate function.
+2. **Create a PixelArtGenerator instance**:
 
-## Return Value
-Returns an object containing:
-- `image`: Base64-encoded image data URL of the generated pixel art sprite.
-- `url`: Direct URL to the generated image.
-
-## Examples
-
-1. Generate a simple pixel art sprite:
-```javascript
-const result = await sprite.generatePixelArt("A pixelated robot");
-console.log(result.image);
-console.log(result.url);
+```python
+generator = PixelArtGenerator()
 ```
 
-2. Generate and save a pixel art sprite:
-```javascript
-const result = await sprite.generatePixelArt("A pixel art cat", { save: true });
-console.log("Saved pixel art sprite:", result.url);
+3. **Generate pixel art**:
+
+```python
+pixel_art = generator.generate(width=32, height=32, palette_size=8)
 ```
 
-## Notes or Considerations
-- The function uses AI models (DALL-E 3) to generate pixel art images, which may result in varying outputs for the same input.
-- Generated sprites are optimized for a pixel art style with a maximum of 32x32 pixels.
-- The function converts images to a limited color palette for authentic pixel art appearance.
-- When saving images, they are stored with a timestamp-based filename.
-- The function may take some time to complete due to API calls and image processing.
-- Ensure you have the necessary permissions and API keys set up for using the OpenAI image generation service.
+In this example, we're generating a 32x32 pixel art image with a palette of 8 colors.
+
+4. **Save the generated pixel art**:
+
+```python
+save_image(pixel_art, 'generated_pixel_art.png')
+```
+
+This will save the generated pixel art to a file named `generated_pixel_art.png`.
+
+## Customizing the Generation
+
+SpriteAI provides various parameters and options to customize the generated pixel art. You can experiment with the following:
+
+- `palette_size`: The number of colors in the palette.
+- `color_mode`: The color mode of the generated image (e.g., 'rgb', 'grayscale').
+- `noise_factor`: The amount of noise added to the pixel art.
+- `symmetry`: The type of symmetry applied to the image (e.g., 'none', 'horizontal', 'vertical', 'both').
+
+By adjusting these parameters, you can create a wide variety of unique pixel art images that can be used in your backend-driven applications.
+
+## Conclusion
+
+SpriteAI provides a simple and efficient way for backend engineers to generate pixel art programmatically. By leveraging this library, you can create custom pixel art assets that can be used to enhance the visual elements of your applications, even without a dedicated designer on your team.
+}
