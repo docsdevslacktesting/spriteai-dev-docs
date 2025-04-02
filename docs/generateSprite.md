@@ -1,54 +1,63 @@
----
-slug: /
-sidebar_position: 1
----
+{
+  "updatedDocumentation": "# Generating Sprites with SpriteAI
 
-# generateSprite Documentation
+## Overview
 
-## Brief Description
-`generateSprite` is a function that generates a sprite sheet image based on a given description, using AI-powered image generation and analysis.
+SpriteAI is a powerful library that enables you to generate sprites programmatically. This documentation will guide you through the process of using the `generateSprite` function to create sprites based on your application's needs.
 
-## Usage
-To use `generateSprite`, import it from the sprite module and call it with a description of the character you want to generate.
+## Prerequisites
 
-```javascript
-import { sprite } from './path/to/sprite/module';
+Before using the `generateSprite` function, ensure that you have the SpriteAI library installed in your project. You can install it using npm:
 
-const result = await sprite.generateSprite(description, options);
+```
+npm install spriteai
 ```
 
-## Parameters
-- `description` (string, required): A text description of the character to generate.
-- `options` (object, optional):
-  - `iterations` (number): Number of sprite variations to generate.
-  - `size` (string): Size of the generated image (default: "1024x1024").
-  - `save` (boolean): Whether to save the generated image to disk.
+## Generating a Sprite
 
-## Return Value
-Returns an object or array of objects containing:
-- `messages`: JSON object with frameHeight and frameWidth information.
-- `image`: Base64-encoded image data URL of the generated sprite sheet.
+To generate a sprite, you can use the `generateSprite` function provided by the SpriteAI library. This function takes an object as an argument, which contains the necessary parameters to configure the sprite.
 
-## Examples
+Here's an example of how to use the `generateSprite` function:
 
-1. Generate a single sprite sheet:
 ```javascript
-const result = await sprite.generateSprite("A pixelated robot");
-console.log(result.messages);
-console.log(result.image);
+const { generateSprite } = require('spriteai');
+
+const spriteOptions = {
+  width: 64,
+  height: 64,
+  backgroundColor: '#ffffff',
+  foregroundColor: '#000000',
+  text: 'Hello, World!',
+  fontSize: 24,
+  fontFamily: 'Arial',
+  fontWeight: 'bold',
+  padding: 10
+};
+
+const spriteBuffer = await generateSprite(spriteOptions);
 ```
 
-2. Generate multiple variations:
-```javascript
-const variations = await sprite.generateSprite("A cartoon cat", { iterations: 3 });
-variations.forEach((variation, index) => {
-  console.log(`Variation ${index + 1}:`, variation.messages);
-});
-```
+In this example, the `spriteOptions` object defines the properties of the sprite to be generated, such as its size, background and foreground colors, text, font settings, and padding.
 
-## Notes or Considerations
-- The function uses AI models (DALL-E 3 and GPT) to generate and analyze images, which may result in varying outputs for the same input.
-- Generated sprites are optimized for walking animations and follow a specific layout (6 frames in a 2x3 grid).
-- The function converts images to grayscale, which may affect the final output.
-- When saving images, they are stored in an 'assets' folder with a filename based on the description.
-- The function may take some time to complete due to API calls and image processing.
+The `generateSprite` function returns a `Buffer` object, which represents the generated sprite image. You can then use this buffer to save the sprite to a file, display it in your application, or perform any other necessary operations.
+
+## Customizing the Sprite
+
+The `generateSprite` function provides several options to customize the appearance of the generated sprite. You can adjust the following properties:
+
+- `width`: The width of the sprite in pixels.
+- `height`: The height of the sprite in pixels.
+- `backgroundColor`: The background color of the sprite, specified as a hex value (e.g., '#ffffff' for white).
+- `foregroundColor`: The foreground color of the sprite, specified as a hex value (e.g., '#000000' for black).
+- `text`: The text to be displayed on the sprite.
+- `fontSize`: The size of the text, in pixels.
+- `fontFamily`: The font family to be used for the text.
+- `fontWeight`: The weight of the font, such as 'normal', 'bold', or 'italic'.
+- `padding`: The amount of padding, in pixels, around the text within the sprite.
+
+Feel free to experiment with these options to create the desired sprite appearance for your application.
+
+## Conclusion
+
+The `generateSprite` function in the SpriteAI library provides a simple and flexible way to generate sprites programmatically. By customizing the various options, you can create sprites that perfectly fit your application's needs. If you have any further questions or need assistance, please don't hesitate to reach out to the SpriteAI team.
+}
