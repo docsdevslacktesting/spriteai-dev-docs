@@ -1,47 +1,57 @@
-# generatePixelArt Documentation
+{
+  "updatedDocumentation": "# Generate Pixel Art
 
-## Brief Description
-`generatePixelArt` is a function that generates a pixel art sprite based on a given description using AI-powered image generation and processing.
+## Introduction
+
+The SpriteAI library provides a powerful tool for generating pixel art from images. This documentation will guide you through the process of using the `generatePixelArt` function to create retro-style pixel art images.
 
 ## Usage
-To use `generatePixelArt`, import it from the sprite module and call it with a description of the pixel art sprite you want to generate.
+
+To generate pixel art, you can use the `generatePixelArt` function provided by the SpriteAI library. This function takes an image input and generates a pixel art version of the image.
+
+Here's an example of how to use the `generatePixelArt` function:
 
 ```javascript
-import { sprite } from './path/to/sprite/module';
+const { generatePixelArt } = require('spriteai');
 
-const result = await sprite.generatePixelArt(description, options);
+const originalImage = 'path/to/your/image.jpg';
+const pixelArtImage = generatePixelArt(originalImage, {
+  scale: 8,
+  colors: 16,
+  dither: true
+});
+
+// Save the pixel art image
+await saveImage(pixelArtImage, 'path/to/save/pixel-art.png');
 ```
 
-## Parameters
-- `description` (string, required): A text description of the pixel art sprite to generate.
-- `options` (object, optional):
-  - `save` (boolean): Whether to save the generated image to disk.
-  - Other options inherited from the base generate function.
+The `generatePixelArt` function accepts the following options:
 
-## Return Value
-Returns an object containing:
-- `image`: Base64-encoded image data URL of the generated pixel art sprite.
-- `url`: Direct URL to the generated image.
+- `scale`: The scaling factor for the pixel art image. A higher value will result in a larger pixel art image.
+- `colors`: The number of colors to use in the pixel art image. The library will automatically select the best colors to represent the original image.
+- `dither`: A boolean value indicating whether to apply dithering to the pixel art image. Dithering can help improve the visual quality, especially when the number of colors is limited.
 
-## Examples
+## Example
 
-1. Generate a simple pixel art sprite:
+Here's an example of how the `generatePixelArt` function can be used:
+
 ```javascript
-const result = await sprite.generatePixelArt("A pixelated robot");
-console.log(result.image);
-console.log(result.url);
+const { generatePixelArt } = require('spriteai');
+
+const originalImage = 'path/to/your/image.jpg';
+const pixelArtImage = generatePixelArt(originalImage, {
+  scale: 8,
+  colors: 16,
+  dither: true
+});
+
+// Save the pixel art image
+await saveImage(pixelArtImage, 'path/to/save/pixel-art.png');
 ```
 
-2. Generate and save a pixel art sprite:
-```javascript
-const result = await sprite.generatePixelArt("A pixel art cat", { save: true });
-console.log("Saved pixel art sprite:", result.url);
-```
+In this example, we load an image from the file system, generate a pixel art version of the image using the `generatePixelArt` function, and then save the resulting pixel art image to a file.
 
-## Notes or Considerations
-- The function uses AI models (DALL-E 3) to generate pixel art images, which may result in varying outputs for the same input.
-- Generated sprites are optimized for a pixel art style with a maximum of 32x32 pixels.
-- The function converts images to a limited color palette for authentic pixel art appearance.
-- When saving images, they are stored with a timestamp-based filename.
-- The function may take some time to complete due to API calls and image processing.
-- Ensure you have the necessary permissions and API keys set up for using the OpenAI image generation service.
+## Conclusion
+
+The SpriteAI library's `generatePixelArt` function provides a convenient way to create retro-style pixel art images from your original images. By adjusting the scale, color count, and dithering options, you can achieve a variety of pixel art styles to fit your needs.
+}
