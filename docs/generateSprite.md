@@ -1,54 +1,35 @@
----
-slug: /
-sidebar_position: 1
----
+{
+  "updatedDocumentation": "# Generating Sprites with SpriteAI
 
-# generateSprite Documentation
+## Overview
 
-## Brief Description
-`generateSprite` is a function that generates a sprite sheet image based on a given description, using AI-powered image generation and analysis.
+SpriteAI is a powerful tool that makes it easy to create sprites for your projects. Whether you're working on a game, an app, or any other kind of visual project, SpriteAI can help you generate sprites quickly and efficiently.
 
-## Usage
-To use `generateSprite`, import it from the sprite module and call it with a description of the character you want to generate.
+In this guide, we'll walk you through the process of generating sprites using SpriteAI. We'll cover the basics of how the tool works, and provide some tips and tricks to help you get the most out of it.
 
-```javascript
-import { sprite } from './path/to/sprite/module';
+## Getting Started
 
-const result = await sprite.generateSprite(description, options);
-```
+To get started with SpriteAI, you'll need to have the following:
 
-## Parameters
-- `description` (string, required): A text description of the character to generate.
-- `options` (object, optional):
-  - `iterations` (number): Number of sprite variations to generate.
-  - `size` (string): Size of the generated image (default: "1024x1024").
-  - `save` (boolean): Whether to save the generated image to disk.
+- A set of images or drawings that you want to turn into sprites
+- The SpriteAI tool installed on your computer
 
-## Return Value
-Returns an object or array of objects containing:
-- `messages`: JSON object with frameHeight and frameWidth information.
-- `image`: Base64-encoded image data URL of the generated sprite sheet.
+Once you have everything you need, simply open up SpriteAI and follow these steps:
 
-## Examples
+1. Import your images or drawings into the tool.
+2. Customize the settings to your liking, such as the size and animation of the sprites.
+3. Click the \"Generate Sprites\" button and let SpriteAI do its magic!
 
-1. Generate a single sprite sheet:
-```javascript
-const result = await sprite.generateSprite("A pixelated robot");
-console.log(result.messages);
-console.log(result.image);
-```
+That's it! Your sprites will be ready to use in no time.
 
-2. Generate multiple variations:
-```javascript
-const variations = await sprite.generateSprite("A cartoon cat", { iterations: 3 });
-variations.forEach((variation, index) => {
-  console.log(`Variation ${index + 1}:`, variation.messages);
-});
-```
+## Tips and Tricks
 
-## Notes or Considerations
-- The function uses AI models (DALL-E 3 and GPT) to generate and analyze images, which may result in varying outputs for the same input.
-- Generated sprites are optimized for walking animations and follow a specific layout (6 frames in a 2x3 grid).
-- The function converts images to grayscale, which may affect the final output.
-- When saving images, they are stored in an 'assets' folder with a filename based on the description.
-- The function may take some time to complete due to API calls and image processing.
+Here are a few tips and tricks to help you get the most out of SpriteAI:
+
+- Experiment with different settings to see what works best for your project.
+- Try using a variety of image types and sizes to create a diverse set of sprites.
+- Consider adding animations to your sprites to bring them to life.
+- Share your creations with the community and get feedback from other users.
+
+We hope this guide has been helpful! If you have any questions or need further assistance, feel free to reach out to our support team. Happy sprite-making!
+}
