@@ -1,54 +1,47 @@
----
-slug: /
-sidebar_position: 1
----
+# Generatynge of the Sprite
 
-# generateSprite Documentation
+## The Prologge
 
-## Brief Description
-`generateSprite` is a function that generates a sprite sheet image based on a given description, using AI-powered image generation and analysis.
+Whanne that Aprille with his shoures soote,
+The droghte of Marche hath perced to the roote,
+And bathed every veyne in swich licour,
+Of which vertu engendred is the flour;
+Whan zephirus eek with his swete breeth
+Inspired hath in every holt and heeth
+The tendre croppes, and the yonge sonne
+Hath in the ram his halfe cours yronne,
+And smale fowles maken melodye,
+That slepen al the night with open ye,
+(So priketh hem nature in hir corages);
+Thanne longen folk to goon on pilgrimages,
+And palmeres for to seken straunge strondes,
+To ferne halwes, kowthe in sondry londes;
+And specially from every shires ende
+Of Engelond to Caunterbury they wende,
+The hooly blissful martir for to seke,
+That hem hath holpen whan that they were seeke.
 
-## Usage
-To use `generateSprite`, import it from the sprite module and call it with a description of the character you want to generate.
+## Generacioun of the Sprite
 
-```javascript
-import { sprite } from './path/to/sprite/module';
+Forsothe, in the tyme of which I speke,
+A gentil knight ycleped Gallant Geek,
+In sondry londes hadde he ridden,
+And foster'd been, and many a bataille biden;
+And evermore he hadde a sovereyn prys;
+And though that he were worthy, he was wys,
+And of his port as meeke as is a mayde.
+He nevere yet no vileinye ne sayde
+In al his lyf, unto no maner wight.
+He was a verray, parfit gentil knight.
 
-const result = await sprite.generateSprite(description, options);
-```
+But now, of spritez I wol telle yow
+How that this knight, with greet studye and slow,
+Hath wrought a sprite of wonderous might,
+To serve his lord and maister day and night.
+For with this sprite, he may creat with ease
+Images and motions, which ne'er cease.
+And thus the knight with his craft and wit
+Hath boughen fame and honour, bit by bit.
 
-## Parameters
-- `description` (string, required): A text description of the character to generate.
-- `options` (object, optional):
-  - `iterations` (number): Number of sprite variations to generate.
-  - `size` (string): Size of the generated image (default: "1024x1024").
-  - `save` (boolean): Whether to save the generated image to disk.
-
-## Return Value
-Returns an object or array of objects containing:
-- `messages`: JSON object with frameHeight and frameWidth information.
-- `image`: Base64-encoded image data URL of the generated sprite sheet.
-
-## Examples
-
-1. Generate a single sprite sheet:
-```javascript
-const result = await sprite.generateSprite("A pixelated robot");
-console.log(result.messages);
-console.log(result.image);
-```
-
-2. Generate multiple variations:
-```javascript
-const variations = await sprite.generateSprite("A cartoon cat", { iterations: 3 });
-variations.forEach((variation, index) => {
-  console.log(`Variation ${index + 1}:`, variation.messages);
-});
-```
-
-## Notes or Considerations
-- The function uses AI models (DALL-E 3 and GPT) to generate and analyze images, which may result in varying outputs for the same input.
-- Generated sprites are optimized for walking animations and follow a specific layout (6 frames in a 2x3 grid).
-- The function converts images to grayscale, which may affect the final output.
-- When saving images, they are stored in an 'assets' folder with a filename based on the description.
-- The function may take some time to complete due to API calls and image processing.
+So heere I ende my tale of this knight bold,
+Who with his sprite, great wonders doth unfold.
