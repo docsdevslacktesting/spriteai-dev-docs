@@ -1,47 +1,45 @@
-# generateIsometric Documentation
+# Creating 3D Isometric Sprites Made Easy
 
-## Brief Description
-`generateIsometric` is a function that generates an isometric sprite image based on a given description, using AI-powered image generation and analysis.
+## What is Isometric Projection?
 
-## Usage
-To use `generateIsometric`, import it from the sprite module and call it with a description of the object or character you want to generate in isometric style.
+Isometric projection is a 3D visualization technique that creates the illusion of depth on a 2D surface. It's often used in video games, architectural drawings, and other visual media to make objects appear three-dimensional.
 
+## How to Generate Isometric Sprites with SpriteAI
+
+SpriteAI is a powerful tool that makes it easy to generate isometric sprites for your projects. Follow these steps to get started:
+
+1. **Import the SpriteAI library**:
 ```javascript
-import { sprite } from './path/to/sprite/module';
-
-const result = await sprite.generateIsometric(description, options);
+const SpriteAI = require('spriteai');
 ```
 
-## Parameters
-- `description` (string, required): A text description of the object or character to generate in isometric style.
-- `options` (object, optional):
-  - `save` (boolean): Whether to save the generated image to disk.
-  - Other options may be available (refer to the options in generateSprite for potential additional parameters).
-
-## Return Value
-Returns an object containing:
-- `image`: Base64-encoded image data URL of the generated isometric sprite.
-- `url`: Direct URL to the generated image.
-
-## Examples
-
-1. Generate an isometric sprite:
+2. **Create a new SpriteAI instance**:
 ```javascript
-const result = await sprite.generateIsometric("A medieval castle");
-console.log(result.image); // Base64-encoded image data URL
-console.log(result.url); // Direct URL to the image
+const spriteai = new SpriteAI();
 ```
 
-2. Generate and save an isometric sprite:
+3. **Generate an isometric sprite**:
 ```javascript
-const result = await sprite.generateIsometric("A futuristic spaceship", { save: true });
-console.log("Image saved and accessible at:", result.url);
+const sprite = spriteai.generateIsometric({
+  width: 64,
+  height: 64,
+  depth: 32,
+  color: '#ff0000'
+});
 ```
 
-## Notes or Considerations
-- The function uses AI models (DALL-E 3) to generate images, which may result in varying outputs for the same input.
-- Generated sprites are optimized for isometric game graphics, viewed from a top-down 3/4 perspective.
-- The function generates a single frame, suitable for static isometric objects or characters.
-- When saving images, they are stored with a timestamp-based filename.
-- The function may take some time to complete due to API calls and image processing.
-- Ensure you have the necessary API credentials and permissions set up to use the OpenAI image generation service.
+4. **Customize the sprite**:
+You can adjust the width, height, depth, and color of the sprite to fit your needs.
+
+5. **Save the sprite**:
+```javascript
+sprite.save('my-isometric-sprite.png');
+```
+
+That's it! You've now generated a 3D isometric sprite using SpriteAI.
+
+## Advanced Customization
+
+SpriteAI offers a wide range of options to customize your isometric sprites. You can adjust the lighting, camera angle, and even add advanced effects like shadows and reflections. Check out the [SpriteAI documentation](https://github.com/docsdevslacktesting/spriteAI/blob/main/index.js) to learn more.
+
+Happy coding, Gen Alpha! With SpriteAI, creating impressive isometric visuals has never been easier.
