@@ -1,42 +1,39 @@
----
-slug: /
-sidebar_position: 1
----
+# Feature Friday 🎉
 
-# Feature Friday
+Hey there, SpriteAI devs! Welcome to Feature Friday, our weekly shindig where we showcase the awesome new stuff we've been cooking up. It's all about keeping you in the loop and getting your thoughts on what we're building.
 
-## Overview
+## What's the deal with Feature Friday?
 
-Feature Friday is a weekly event where we showcase and discuss new features, improvements, and updates to our product. This initiative aims to keep our team and stakeholders informed about recent developments and upcoming enhancements.
+Feature Friday is our cool way of:
 
-## Purpose
+1. Showing off the latest and greatest features we're working on
+2. Getting your feedback (because, let's face it, you're the ones who'll be using this stuff)
+3. Keeping everyone on the same page about what's coming down the pipeline
 
-The primary purposes of Feature Friday are:
+## When does this party happen?
 
-1. To highlight recent product improvements
-2. To gather feedback from team members and stakeholders
-3. To align the team on product direction and priorities
-4. To foster innovation and encourage idea sharing
+We kick things off every Friday at 2 PM PT / 5 PM ET. It's like a virtual water cooler chat, but with more exciting tech stuff!
 
-## Format
+## What to expect
 
-Feature Friday typically follows this format:
+Each week, we'll:
 
-1. Introduction (5 minutes)
-2. Feature Demonstrations (30 minutes)
-3. Q&A Session (15 minutes)
-4. Open Discussion (10 minutes)
+- Demo some shiny new features or updates
+- Chat about why we're building these things and how they fit into the bigger picture
+- Open the floor for your questions, ideas, and feedback
 
-## Participation
+## How to join in on the fun
 
-All team members are encouraged to attend Feature Friday sessions. Product managers, developers, and quality assurance specialists may be called upon to present or discuss specific features.
+1. Keep an eye out for the Feature Friday announcement in the #general channel
+2. Click that Zoom link when it's showtime
+3. Bring your curiosity and your ideas – we love a good brainstorm!
 
-## Documentation
+## Can't make it?
 
-After each Feature Friday session, a summary of the presented features and key discussion points will be documented and shared with the team.
+No worries! We've got you covered:
 
-## Schedule
+- Recordings will be posted in the #feature-friday channel after each session
+- Slide decks (if we use them) will be shared there too
+- Feel free to drop your questions or thoughts in the channel anytime
 
-Feature Friday takes place every Friday at 2:00 PM in the main conference room or via video conference for remote participants.
-
-For more information, please contact the Product Management team.
+Let's make some magic together! See you on Friday! 🚀✨
