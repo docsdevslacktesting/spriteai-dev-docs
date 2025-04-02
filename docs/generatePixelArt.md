@@ -1,47 +1,51 @@
-# generatePixelArt Documentation
+# Generate Pixel Art
 
-## Brief Description
-`generatePixelArt` is a function that generates a pixel art sprite based on a given description using AI-powered image generation and processing.
+## Overview
+
+The `generatePixelArt` function is used to generate pixel art from an input image. It takes an image file as input and generates a pixel art representation of the image.
 
 ## Usage
-To use `generatePixelArt`, import it from the sprite module and call it with a description of the pixel art sprite you want to generate.
+
+To use the `generatePixelArt` function, you can import it from the `spriteAI` module and call it with an input image file:
 
 ```javascript
-import { sprite } from './path/to/sprite/module';
+const { generatePixelArt } = require('spriteAI');
 
-const result = await sprite.generatePixelArt(description, options);
+generatePixelArt('input_image.jpg')
+  .then(pixelArtData => {
+    // Process the generated pixel art data
+    console.log(pixelArtData);
+  })
+  .catch(error => {
+    console.error('Error generating pixel art:', error);
+  });
 ```
 
-## Parameters
-- `description` (string, required): A text description of the pixel art sprite to generate.
-- `options` (object, optional):
-  - `save` (boolean): Whether to save the generated image to disk.
-  - Other options inherited from the base generate function.
+The `generatePixelArt` function returns a Promise that resolves with the generated pixel art data. The data is a 2D array representing the pixel art image, where each element in the array represents a pixel and contains the RGB color values.
 
-## Return Value
-Returns an object containing:
-- `image`: Base64-encoded image data URL of the generated pixel art sprite.
-- `url`: Direct URL to the generated image.
+## Configuration
+
+You can customize the behavior of the `generatePixelArt` function by passing an optional configuration object as the second argument:
+
+```javascript
+generatePixelArt('input_image.jpg', {
+  pixelSize: 10,
+  palette: ['#FF0000', '#00FF00', '#0000FF']
+})
+  .then(pixelArtData => {
+    // Process the generated pixel art data
+    console.log(pixelArtData);
+  })
+  .catch(error => {
+    console.error('Error generating pixel art:', error);
+  });
+```
+
+The available configuration options are:
+
+- `pixelSize`: The size of each pixel in the generated pixel art (default is 5 pixels).
+- `palette`: An array of hexadecimal color codes to use in the pixel art (default is a set of 16 colors).
 
 ## Examples
 
-1. Generate a simple pixel art sprite:
-```javascript
-const result = await sprite.generatePixelArt("A pixelated robot");
-console.log(result.image);
-console.log(result.url);
-```
-
-2. Generate and save a pixel art sprite:
-```javascript
-const result = await sprite.generatePixelArt("A pixel art cat", { save: true });
-console.log("Saved pixel art sprite:", result.url);
-```
-
-## Notes or Considerations
-- The function uses AI models (DALL-E 3) to generate pixel art images, which may result in varying outputs for the same input.
-- Generated sprites are optimized for a pixel art style with a maximum of 32x32 pixels.
-- The function converts images to a limited color palette for authentic pixel art appearance.
-- When saving images, they are stored with a timestamp-based filename.
-- The function may take some time to complete due to API calls and image processing.
-- Ensure you have the necessary permissions and API keys set up for using the OpenAI image generation service.
+You can find examples of using the `generatePixelArt` function in the `examples` directory of the `spriteAI` package.
