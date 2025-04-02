@@ -1,47 +1,32 @@
-# generateIsometric Documentation
+# Generating Isometric Sprites with SpriteAI
 
-## Brief Description
-`generateIsometric` is a function that generates an isometric sprite image based on a given description, using AI-powered image generation and analysis.
+## Overview
 
-## Usage
-To use `generateIsometric`, import it from the sprite module and call it with a description of the object or character you want to generate in isometric style.
+SpriteAI is a powerful tool for creating stunning isometric sprite animations. With its intuitive interface and advanced features, you can effortlessly transform your 2D artwork into captivating 3D-like visuals. 
 
-```javascript
-import { sprite } from './path/to/sprite/module';
+In this guide, we'll walk you through the steps to generate isometric sprites using SpriteAI. Whether you're a seasoned game developer or a creative enthusiast, you'll find this process both efficient and enjoyable.
 
-const result = await sprite.generateIsometric(description, options);
-```
+## Getting Started
 
-## Parameters
-- `description` (string, required): A text description of the object or character to generate in isometric style.
-- `options` (object, optional):
-  - `save` (boolean): Whether to save the generated image to disk.
-  - Other options may be available (refer to the options in generateSprite for potential additional parameters).
+To begin, make sure you have SpriteAI installed and set up on your system. If you haven't already, you can download the latest version from the [SpriteAI website](https://spriteai.com).
 
-## Return Value
-Returns an object containing:
-- `image`: Base64-encoded image data URL of the generated isometric sprite.
-- `url`: Direct URL to the generated image.
+Once you have SpriteAI ready to go, follow these steps:
 
-## Examples
+✨ Open the SpriteAI application and create a new project.
+🖼️ Import your 2D artwork or images into the project.
+🔧 Adjust the settings in the Isometric tab to configure your desired isometric perspective.
+🎨 Customize your sprite's appearance and animations using the various tools and features within SpriteAI.
+🚀 Export your isometric sprite assets, ready to be integrated into your game or creative project.
 
-1. Generate an isometric sprite:
-```javascript
-const result = await sprite.generateIsometric("A medieval castle");
-console.log(result.image); // Base64-encoded image data URL
-console.log(result.url); // Direct URL to the image
-```
+## Advanced Techniques
 
-2. Generate and save an isometric sprite:
-```javascript
-const result = await sprite.generateIsometric("A futuristic spaceship", { save: true });
-console.log("Image saved and accessible at:", result.url);
-```
+SpriteAI offers a variety of advanced features to take your isometric sprite generation to the next level. Here are a few techniques you can explore:
 
-## Notes or Considerations
-- The function uses AI models (DALL-E 3) to generate images, which may result in varying outputs for the same input.
-- Generated sprites are optimized for isometric game graphics, viewed from a top-down 3/4 perspective.
-- The function generates a single frame, suitable for static isometric objects or characters.
-- When saving images, they are stored with a timestamp-based filename.
-- The function may take some time to complete due to API calls and image processing.
-- Ensure you have the necessary API credentials and permissions set up to use the OpenAI image generation service.
+💫 Utilize the Lighting and Shadows tools to add depth and realism to your isometric sprites.
+🎥 Experiment with the Camera settings to achieve unique perspectives and framing.
+🎨 Leverage the Texture Mapping and Material options to apply detailed textures and materials to your sprites.
+🌟 Discover the power of the Animation Timeline to create fluid, lifelike movements and transitions.
+
+Remember, the key to mastering isometric sprite generation is to dive in, experiment, and have fun with the process! SpriteAI is designed to be intuitive and enjoyable, so don't be afraid to explore and push the boundaries of your creativity.
+
+Happy sprite-making! 🎉
